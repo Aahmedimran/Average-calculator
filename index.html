@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Average calculator</h1>
+
+    <form onsubmit="calculate(); return false;">
+        <div class="form">
+            <label for="subject1Marks">Subject1 Marks</label>
+            <input type="number" min="1" required id="subject1Marks" placeholder="Enter Subject1 marks">
+            <br>
+            <label for="subject2Marks">Subject2 Marks</label>
+            <input type="number" min="1" required id="subject2Marks" placeholder="Enter Subject2 marks">
+            <br>
+            <label for="subject3Marks">Subject3 Marks</label>
+            <input type="number" min="1" required id="subject3Marks" placeholder="Enter Subject3 marks">
+            <br>
+            <label for="subject4Marks">Subject4 Marks</label>
+            <input type="number" min="1" required id="subject4Marks" placeholder="Enter Subject4 marks">
+
+            <br>
+            <label for="subject5Marks">Subject5 Marks</label>
+            <input type="number" min="1" required id="subject5Marks" placeholder="Enter Subject5 marks">
+
+            <br>
+            <label for="subject6Marks">Subject6 Marks</label>
+            <input type="number" min="1" required id="subject6Marks" placeholder="Enter Subject6 marks">
+
+            <br>
+            <label for="subject7Marks">Subject7 Marks</label>
+            <input type="number" min="1" required id="subject7Marks" placeholder="Enter Subject7 marks">
+
+            <br>
+            <label for="subject8Marks">Subject8 Marks</label>
+            <input type="number" min="1" required id="subject8Marks" placeholder="Enter Subject8 marks">
+            <br>
+            <label for="subject9Marks">Subject9 Marks</label>
+            <input type="number" min="1" required id="subject9Marks" placeholder="Enter Subject9 marks">
+
+            <br>
+            <label for="subject10Marks">Subject10 Marks</label>
+            <input type="number" min="1" required id="subject10Marks" placeholder="Enter Subject10 marks">
+            <br>
+        </div>
+        <button type="submit">Calculate</button>
+    </form>
+
+    <h3 id="totalMarks"></h3>
+    <h3 id="result"></h3>
+
+
+    <script>
+        // Write founction and call all subject values
+        function calculate() {
+            let subject1Marks = document.querySelector("#subject1Marks").value;
+            let subject2Marks = document.querySelector("#subject2Marks").value;
+            let subject3Marks = document.querySelector("#subject3Marks").value;
+            let subject4Marks = document.querySelector("#subject4Marks").value;
+            let subject5Marks = document.querySelector("#subject5Marks").value;
+            let subject6Marks = document.querySelector("#subject6Marks").value;
+            let subject7Marks = document.querySelector("#subject7Marks").value;
+            let subject8Marks = document.querySelector("#subject8Marks").value;
+            let subject9Marks = document.querySelector("#subject9Marks").value;
+            let subject10Marks = document.querySelector("#subject10Marks").value;
+            // firstly add all subject number
+            let totalMarks = parseInt(subject1Marks) + parseInt(subject2Marks) + parseInt(subject3Marks) + parseInt(subject4Marks) + parseInt(subject5Marks) + parseInt(subject6Marks) + parseInt(subject7Marks) + parseInt(subject8Marks) + parseInt(subject9Marks) + parseInt(subject10Marks);
+            // Print all subject number
+            document.querySelector("#totalMarks").innerHTML = `you have total Marks  ${totalMarks}`;
+            //totalMarks divide of number subject calculate avarge
+            let result = totalMarks / 10;
+
+            document.querySelector("#result").innerHTML = `you have total Avarge Number is ${result}%`;
+
+
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
