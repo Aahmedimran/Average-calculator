@@ -17,7 +17,7 @@
       //totalMarks divide of number subject calculate avarge
       let result = totalMarks / 10;
 
-      document.querySelector("#result").innerHTML = `You have total Avarge Number is ${result}%`;
+      document.querySelector("#result").innerHTML = `You have total Avarge Number is ${result}`;
 
 
 
